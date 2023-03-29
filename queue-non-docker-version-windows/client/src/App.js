@@ -111,7 +111,7 @@ const App = () => {
         <Text>We provide 4 base models and other custom models.</Text>
         <Text marginBottom={"10px"}>When using custom model, include this prefix in the prompt</Text>
         <UnorderedList marginBottom={"30px"}>
-          <ListItem>wimvanhenden/ultimate-country-v1: <b>ultmtcntry</b></ListItem>
+          <ListItem>wimvanhenden/ultimate-country: <b>ultmtcntry</b></ListItem>
           <ListItem>prompthero/openjourney <b>mdjrny-v4 style</b></ListItem>
           <ListItem>nitrosocke/Arcane-Diffusion: <b>arcane style</b></ListItem>
         </UnorderedList>
@@ -126,13 +126,19 @@ const App = () => {
           <Textarea  placeholder='' value={timings} onChange={(e) => updateTimings(e.target.value)}></Textarea>
 
           <Text>Negative prompt</Text>
+          <Text>ugly,duplicate, mutilated, out of frame,  mutation, blurry, bad anatomy, extra legs,low resolution,disfigured</Text>
           <Input placeholder='negative prompt' value={neg_prompt} onChange={(e) => updateNegPrompt(e.target.value)}></Input>
 
           <FormControl>
             <FormLabel>Model</FormLabel>
             <Select placeholder='runwayml/stable-diffusion-v1-5' value={selected_model} onChange={(e) => updateSelectedModel(e.target.value)} >
               <option>runwayml/stable-diffusion-v1-5</option>
-              <option>wimvanhenden/ultimate-country-v1</option>
+              <option>wimvanhenden/ultimate-country-photo-v1</option>
+              <option>wimvanhenden/ultimate-country-photo-v2</option>
+              <option>wimvanhenden/ultimate-country-photo-v3</option>
+              <option>wimvanhenden/ultimate-country-texture-v1</option>
+              <option>wimvanhenden/ultimate-country-texture-v2</option>
+              <option>wimvanhenden/ultimate-country-texture-v3</option>  
               <option>nitrosocke/Arcane-Diffusion</option>
               <option>prompthero/openjourney</option>
             </Select>
